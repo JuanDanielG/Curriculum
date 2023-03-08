@@ -14,6 +14,7 @@ p {
     color: black;  /* color de la fuente */
 }
 
+/* TABLAS */
 img {
     display: block; /* esta propiedad me ayuda a centrar el parrafo */
     margin: auto; /* esta propiedad me ayuda a centrar el parrafo */
@@ -33,3 +34,5 @@ a{
     color: black; /* color de la fuente */
     font-family: Verdana, Geneva, Tahoma, sans-serif; /* nombre de la familia de la fuente */
 }
+
+/* FORMULARIO */

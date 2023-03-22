@@ -1,42 +1,85 @@
 h1 {
-    text-align: center; /* sirve para alinear al centro */
-    font-family: Verdana, Geneva, Tahoma, sans-serif; /* nombre de la familia de la fuente */
-    color: black; /* color de la fuente */
+    text-align: center;
+    /* sirve para alinear al centro */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* nombre de la familia de la fuente */
+    color: black;
+    /* color de la fuente */
 }
 
 body {
-    background-color: antiquewhite; /* color de fondo del body de la pagina */
+    background-color: antiquewhite;
+    /* color de fondo del body de la pagina */
 }
 
 p {
-    text-align: center; /* sirve para alinear al centro */
-    font-family: Verdana, Geneva, Tahoma, sans-serif; /* nombre de la familia de la fuente */
-    color: black;  /* color de la fuente */
+    text-align: center;
+    /* sirve para alinear al centro */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* nombre de la familia de la fuente */
+    color: black;
+    /* color de la fuente */
 }
 
 /* TABLAS */
 img {
-    display: block; /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto; /* esta propiedad me ayuda a centrar el parrafo */
-    width: 200px; /*ancho de la imagen*/
-    height: 200px; /*alto de la imagen*/
+    display: block;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    margin: auto;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    width: 200px;
+    /*ancho de la imagen*/
+    height: 200px;
+    /*alto de la imagen*/
 }
-img:hover{
-    background-color: cornflowerblue; /* color de fondo al colocar el cursor en la imagen */
+
+img:hover {
+    background-color: cornflowerblue;
+    /* color de fondo al colocar el cursor en la imagen */
 }
-tr:hover{
-    background-color: cornflowerblue; /* color de fondo al colocar el cursor en la imagen */
+
+tr:hover {
+    background-color: cornflowerblue;
+    /* color de fondo al colocar el cursor en la imagen */
 }
-a{
-    display: block; /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto; /* esta propiedad me ayuda a centrar el parrafo */
-    text-align: center; /* esta propiedad me ayuda a centrar el parrafo */
-    color: black; /* color de la fuente */
-    font-family: Verdana, Geneva, Tahoma, sans-serif; /* nombre de la familia de la fuente */
+
+a {
+    display: block;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    margin: auto;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    text-align: center;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    color: black;
+    /* color de la fuente */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* nombre de la familia de la fuente */
 }
 
 /* FORMULARIO DE INPUTS*/
-input{
-    display: block; /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto; /* esta propiedad me ayuda a centrar el parrafo */
+#contraseña {
+    background-color: coral;
+    /* color de fondo de la caja */
+    color: black;
+    /* color de la letra */
+}
+
+input {
+    border-radius: 3px;
+    /* radio estilo de borde */
+    border: 3px solid green;
+    /* tamaño de borde, color y si es solido */
+    background-color: blanchedalmond;
+    /* color de fondo al colocar el cursor en la imagen */
+    text-align: center;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    display: block;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    margin: auto;
+    /* esta propiedad me ayuda a centrar el parrafo */
+}
+
+.inputcolor {
+    background-color: antiquewhite;
+    /* color de fondo al colocar el cursor en la imagen */
 }

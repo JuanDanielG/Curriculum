@@ -35,4 +35,8 @@ a{
     font-family: Verdana, Geneva, Tahoma, sans-serif; /* nombre de la familia de la fuente */
 }
 
-/* FORMULARIO */
+/* FORMULARIO DE INPUTS*/
+input{
+    display: block; /* esta propiedad me ayuda a centrar el parrafo */
+    margin: auto; /* esta propiedad me ayuda a centrar el parrafo */
+}

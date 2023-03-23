@@ -83,3 +83,40 @@ input {
     background-color: antiquewhite;
     /* color de fondo al colocar el cursor en la imagen */
 }
+/* ETIQUETAS DE MULTIMEDIA*/
+.imagenmultimedia{
+    display: block;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    margin: auto;
+    /* esta propiedad me ayuda a centrar el parrafo */
+}
+iframe{
+    display: block;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    margin: auto;
+    /* esta propiedad me ayuda a centrar el parrafo */
+}
+embed{
+    display: block;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    margin: auto;
+    /* esta propiedad me ayuda a centrar el parrafo */
+}
+object{
+    display: block;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    margin: auto;
+    /* esta propiedad me ayuda a centrar el parrafo */
+}
+param{
+    display: block;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    margin: auto;
+    /* esta propiedad me ayuda a centrar el parrafo */
+}
+video{
+    display: block;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    margin: auto;
+    /* esta propiedad me ayuda a centrar el parrafo */
+}

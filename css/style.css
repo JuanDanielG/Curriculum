@@ -120,3 +120,35 @@ video{
     margin: auto;
     /* esta propiedad me ayuda a centrar el parrafo */
 }
+
+/* ETIQUETAS DE SEMANTICA*/
+p{
+    display: block;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    margin: auto;
+    /* esta propiedad me ayuda a centrar el parrafo */ 
+}
+/* Cambios sobre la propia tabla */
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    
+  }
+  /* Espacio de relleno en celdas y cabeceras */
+  td,
+  th {
+    padding: 10px;
+  }
+  /* Modificación de estilos en cabeceras */
+  th {
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  /* Modificación de estilos en celdas */
+  td {
+    text-align: center;
+    border-bottom: 2px solid #111;
+    color: #333;
+    font-size: 18px;
+  }

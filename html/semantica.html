@@ -1,14 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Semantica</title>
 </head>
+
 <body>
     <h1>Ejemplos de etiquetas de Semantica</h1><br>
+    <h1>Etiquetas html de texto</h1><br>
 
-    
+    <p>Hola, esto es un pequeño <strong>ejemplo de prueba.</strong>.</p><br>
+
+    <!-- Modificación de significado -->
+    <h1>Etiquetas de modificación del significado</h1>
+    <p>El resultado de 24<sup>2</sup> es el valor de X<sub>a</sub>.</p>
+    <!-- Las etiquetas HTML <sup> y <sub> se utilizan para indicar superíndices y subíndices. --> <br>
+
+
+    <p>
+        <q cite="http://www.imdb.com/title/tt0468569/">
+            Hay hombres que solo quieren ver <strong>arder</strong> el mundo.
+            <!-- Por otra parte, la etiqueta HTML <q> nos permite hacer referencia a una cita o frase extraída de otro contexto. Obsérvese que en esta etiqueta disponemos de un atributo opcional cite, mediante el cuál podemos hacer referencia a una URL (en este caso a la ficha de la película de Batman) que en este caso es de donde procede la frase -->
+        </q>
+    </p><br>
+
+
+    <p>
+        El término <dfn><abbr title="Kilómetro">Km</abrr></dfn>
+        <!-- es una unidad de longitud. También tenemos las etiquetas <dfn> y <abbr> que nos permiten indicar definiciones y abreviaturas, y que ambas permiten el uso del atributo opcional title para indicar el significado de dicho término o abreviatura. Un ejemplo de ambas etiquetas combinadas -->
+    </p><br>
+
+    <!-- Aspectos informaticos -->
+    <h1>Aspectos informáticos</h1><br>
+    <p>Pulsa las teclas <kbd>CTRL</kbd>+<kbd>T</kbd>...</p> <!--Un ejemplo práctico de la etiqueta <kbd> sería modificar sus estilos CSS para obtener algo similar a CTRL+T, simplemente combinando el siguiente código HTML y CSS  --> <br>
+
+    <style>
+        kbd {
+            font-family: "Victor Mono", monospace;
+            padding: 2px 6px;
+            background: #eee;
+            border: 3px solid #bbb;
+            border-top-width: 1px;
+            border-bottom: 3px solid #777;
+        }
+    </style>
+
+<p>
+    <time datetime="2001-01-04">4 de Enero</time>     <!-- Con la etiqueta <time> podemos indicar una fecha y/o hora en formato legible para humanos, indicando de forma opcional el atributo datetime con la fecha en un formato orientado a máquinas. De la misma forma se utiliza la etiqueta <data> para información genérica, en la que se puede usar su atributo value para indicar el texto equivalente orientado a máquinas -->
+
+    <data value="ESDLA3">El retorno del Rey</data>
+  </p><br>
+
+  <!-- Etiquetas de enlaces o hipervinculos -->
+  <h1>Etiquetas de enlaces o hipervinculos</h1><br>
+
+  <ul>
+    <li><a rel="author" href="http://www.emezeta.com/">Emezeta</a></li><br>
+    <li><a href="http://lenguajecss.com/" target="_blank">LenguajeCSS</a></li><br>
+    <li><a href="http://pagina.com/documento.pdf" download="A-38.pdf">PDF</a></li><br>
+    <li><a href="http://pagina.com/documento-en.pdf" hreflang="en">PDF</a></li><br>
+  </ul><br>
+
+  <!-- Etiquetas HTML de sección -->
+  <h1>Etiquetas HTML de sección</h1><br>
+
+  <div class="articulo">
+    <h1>TECNOLOGÍA PARA EL AHORRO DE AGUA</h1>
+    <p class="intro">Dubái se encuentra incorporando nuevas tecnologías para el ahorro de agua </p>
+    <p class="contenido">con el objetivo de mitigar las inundaciones..</p>
+    <p class="pie">Fuente: <strong>Canal26.com</strong></p>
+  </div><br>
+  
+    <!-- Etiquetas HTML Semánticas -->
+    <h1>Etiquetas HTML Semánticas</h1><br>
+
+    <article class="post">
+        <p>China publica nuevos datos de muestras lunares en línea. (Este sería el texto del artículo.)</p>
+        <article class="comentario">
+          <p>Poco a poco nos vamos acercando a la luna... (Aquí iría el texto del comentario.)</p>
+        </article>
+      </article><br>
+
+    <!--Etiquetas HTML de tablas  -->
+    <h1>Etiquetas HTML de tablas</h1><br>
+
+    <table border="1" >
+        <!-- Cabecera -->
+        <tr>
+          <th>Recibo Agua</th>
+          <!-- Celda de cabecera de la columna 1 -->
+          <th>Recibo Luz</th>
+          <!-- Celda de cabecera de la columna 2 -->
+          <th>Recibo Gas</th>
+          <!-- Celda de cabecera de la columna 3 -->
+        </tr>
+        <!-- Primera fila -->
+        <tr>
+          <td>$45.000</td>
+          <!-- Primera celda de la primera fila -->
+          <td>$65.000</td>
+          <!-- Segunda celda de la primera fila -->
+          <td>$35.500</td>
+          <!-- Tercera celda de la primera fila -->
+        </tr>
+        <!-- Segunda fila -->
+        <tr>
+          <td>$40.000</td>
+          <!-- Primera celda de la segunda fila -->
+          <td>$72.000</td>
+          <!-- Segunda celda de la segunda fila -->
+          <td>$40.000</td>
+          <!-- Tercera celda de la segunda fila -->
+        </tr>
+      </table><br>
+
+    <!--Organización de tablas  -->
+    <h1>Organización de tablas</h1><br>
+      <table>
+        <!-- Table footer: pie de la tabla (tfoot) -->
+        <tfoot>
+          <tr>
+            <td>NodeJS</td>
+            <td>Javascript, Angular</td>
+          </tr>
+        </tfoot>
+        <!-- Table header: cabecera de la tabla (thead) -->
+        <thead>
+          <tr>
+            <th>Backend</th>
+            <th>Frontend</th>
+          </tr>
+        </thead>
+        <!-- Table body: cuerpo de la tabla (tbody) -->
+        <tbody>
+          <tr>
+            <td>JavaScript</td>
+            <td>Html,Css</td>
+          </tr>
+        </tbody>
+        <!-- Leyenda o título de la tabla -->
+        <caption>
+          Desarrolladores
+        </caption>
+      </table>
+
+      
+
+
 </body>
+
 </html>

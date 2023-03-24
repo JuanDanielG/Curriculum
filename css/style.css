@@ -152,3 +152,22 @@ table {
     color: #333;
     font-size: 18px;
   }
+
+/* ETIQUETAS DE VALIDACIONES*/
+  form{
+    display: block;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    margin: auto;
+    /* esta propiedad me ayuda a centrar el parrafo */
+    text-align: center;
+  }
+  
+  input:valid,
+textarea:valid {
+    background: green;
+}
+
+input:invalid,
+textarea:invalid {
+    background: red;
+}

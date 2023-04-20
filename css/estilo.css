@@ -46,13 +46,16 @@ nav{
     margin-left: 20px;
     padding: 12px;
     border-radius: 10px;
+    animation: jello- horizontal .9s both;
+    -webkit-animation: jello- horizontal 0.9s both;
 }
 .nav .enlaces-header a:hover{
     color: #fff;
-    background-color: red;
-    border-color: red;
+    background-color: #d03d3d;
+    border-color: #d03d3d;
     transition: all ease in-out .5s;
-
+    animation: squeeze3124 0.9s both;
+    -webkit-animation: squeeze3124 0.9s both;
 }
 .titulospro{
     text-align: left; 
@@ -92,7 +95,7 @@ nav{
     margin: 28px 0 0 0;
     width: 150px;
     display: inline-block;
-    background-color: red;
+    background-color: #d03d3d;
     text-align: center;
     color: #fff;
     text-decoration: none;
@@ -100,8 +103,9 @@ nav{
     border-radius: 5px;
     font-weight: 400;
     font-size: 16px;
-    text-transform: uppercase; /* esta propiedad (uppercase) me ayuda a que tome se vuelva mayuscula */
-    box-shadow: 0 8px 32px rgba(97, 31, 31, 046)
+    transition: squeeze3124 0.9s both;
+    text-transform: uppercase;/*estapropiedad(uppercase)meayudaaquetomesevuelvamayuscula*/
+    box-shadow: 0 8px 32px rgba(97, 31, 31, 046);
 }
 .content-educacion {
     display: flex;
@@ -146,10 +150,10 @@ div {
 .education a{
     text-decoration: none;
     font-size: 12px;
-    color: gray;
+    color: black;
 }
 .education a:hover{
-    color: #d03d3d;
+    color: black ;
 }
 .education i{
     color: #d03d3d;

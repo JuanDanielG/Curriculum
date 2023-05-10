@@ -1,4 +1,4 @@
-// declaramos 2 variables
+// declaramos 2 variables //
 let enlaces_header = document.querySelectorAll(".enlaces-header")[0];
 let icon_hamburguer = true;
 

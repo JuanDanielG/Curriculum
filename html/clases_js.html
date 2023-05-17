@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases de JS</title>
+    <style>
+        #cambiar_fondo{
+            background-color: aqua;
+            text-transform: uppercase;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #dfdfdf;
+        }
+        #cambiar_fondo:hover{
+            box-shadow:  0 0 10px gray;
+        }
+    </style>
+</head>
+<body id="contenedor">
+    
+    <h1>Juan Daniel Galeano</h1><br>
+    <h2>Estudiante de Programación en Desarrollo Web</h2>
+    <input type="text" id="variable">
+    <button onclick="name_function()" id="name_event" >Caulcular</button>
+    <h1 id="titulo"></h1>
+    <p id="cambiar_fondo">Cambiar fondo</p>
+
+
+    <script>
+        //alert("Bienvenidos a esta página");
+        console.log("¡Ingresaste correctamente!");
+        //variables
+        const nameuno = "El valor de pi"; // la variable es constante porque no cambia
+        var name_dos = "Esto es otra cualquier cosa"; // la variable es global, deja repetirse en el mismo proyecto
+        let nameTres = "Esto es cualquier cosa"; //let lo utilizamos para trabajar por bloques
+        console.log(nameuno +"\n" +name_dos +"\n" +nameTres);
+
+        // tipos de datos
+        let num_a = 10;
+        let num_b = 5.5;
+        let num_c = "20";
+        let bloolean =  false;
+        let stringvar = "Mi nombre es ";
+        let arraynum = [1,2,3,4,5,"6","7","8"];
+        let dias_Semana = ["Lunes","Martes","Miércoles", "Jueves","Viernes"];
+        let users=[
+        {name:"Juan Daniel", last_name:"Galeano", age:18},
+        {name:"Juan Daniel", last_name:"Galeano", age:18},
+        {name:"Juan Daniel", last_name:"Galeano", age:18}
+        ]
+        //operadores aritmeticos
+        let suma = num_a + num_b;
+        let resta = num_a - num_b;
+        let multi = num_a * num_b;
+        let div = num_a / num_b;
+        let modulo = num_a % num_b;
+        let expo = num_a ^ num_b;
+
+        console.log(suma);
+        //suma=math.round(suma);
+        console.log("Suma: " + suma + "\nResta: " + resta);
+
+        //operadores de comparacion </> / <> / <= / >= / = / == / ===
+
+        //operadores logicos && / qr 7 or / || / ! negacion, diferente, contrario
+        console.log(Boolean + "--"+ !Boolean)
+
+        //estructuras condicionales if / else / else if / switch (break)
+        //estructuras repetitivas o ciclicas for / while / do while
+        let long_nameuno = nameuno.length;
+        let long_name_dos = name_dos.length;
+        console.log(long_nameuno);
+        console.log(long_name_dos);
+
+        if(long_nameuno >= 22){
+            let name_minus = nameuno.toLowerCase();
+            console.log(name_minus);
+            console.log(dias_Semana[0]);
+            console.log(users[0]. name);
+        } else{
+            console.log("No tiene la longitud");
+        }
+
+        for (let i=0; i>dias_Semana.length; i++){
+            console.log(dias_Semana[i]);
+        }
+
+        while(i<dias_Semana.length){
+            console.log(dias_Semana[i]);
+            i++;
+        }
+        let j=0;
+        while(j<users.length){
+            console.log(users[j].name);
+            j++;
+        }
+
+        //Funciones
+        function name_function(){
+            alert("Funciona");
+            let variable = document.getElementById('variable').value;
+            variable = variable.toUpperCase();
+            document.getElementById("titulo").innerText = variable;
+            document.getElementById("titulo").style.color = "green";
+        }
+        document.getElementById("name_evento").addEventListern("dblclick", function(){
+            let variable = document.getElementById('variable').value;
+            alert("Hola soy un evento en un id");
+            document.getElementById("titulo").style.background = "gray";
+        });
+        document.getElementById("cambiar_fondo").addEventListener("mouseover", function(){
+            document.getElementById('contenedor').style.background = "red";
+        })
+    </script>
+</body>
+</html>

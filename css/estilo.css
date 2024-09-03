@@ -1,50 +1,75 @@
-*{ /* sirve para eliminar la pequeña linea de la pagina  */
+* {
+    /* sirve para eliminar la pequeña linea de la pagina  */
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* esta propiedad me ayuda a que las medidas se sumen de manera completa */
+    box-sizing: border-box;
+    /* esta propiedad me ayuda a que las medidas se sumen de manera completa */
 }
-body{
-    font-family: 'Roboto', sans-serif; /* este muestra el tipo de familia, que es el que usa google */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* este muestra el tipo de familia, que es el que usa google */
 }
-h1{
-    font-size: 50px; /* tamaño de la letra */
+
+h1 {
+    font-size: 50px;
+    /* tamaño de la letra */
 }
-.contenedor{
-    width: 90%;  /*  */
-    max-width: 1400px; /*  */
-    margin: auto; /*  */
-    overflow: hidden; /* esta propiedad me ayuda a que si la imagen es muy grande, rompe la imagen para evitar la barra de desplazamiento horizontal */
+
+.contenedor {
+    width: 90%;
+    /*  */
+    max-width: 1400px;
+    /*  */
+    margin: auto;
+    /*  */
+    overflow: hidden;
+    /* esta propiedad me ayuda a que si la imagen es muy grande, rompe la imagen para evitar la barra de desplazamiento horizontal */
 }
-header::before{
+
+header::before {
     content: "";
     display: block;
     margin: 80px;
 }
-nav{
-    width: 100%; /* esta propiedad me ayuda a que tome el 100% de la pagina */
-    height: 80px; /* esta propiedad me ayuda a que tome el 100% de la pagina */
-    background-color: #fff; 
-    border-bottom: 1px solid transparent; /* esta propiedad me ayuda a que el borde del boton sea de un pixel, sea solido y transparente */
-    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2); /* esta propiedad me ayuda a que  */
-    position: fixed; /* esta propiedad me ayuda a que sea fija la posicion y no cambie */
-    top: 0%; /* esta propiedad me ayuda a que la distancia hacia arriba sea 0 */
-    z-index: 100; /* esta propiedad me ayuda a que el elemento suba */
-} 
-.nav{
-    display: flex; /* esta propiedad me ayuda a que las cosas se pongan de lado a lado */
+
+nav {
+    width: 100%;
+    /* esta propiedad me ayuda a que tome el 100% de la pagina */
     height: 80px;
-    width: 100%; 
+    /* esta propiedad me ayuda a que tome el 100% de la pagina */
+    background-color: #fff;
+    border-bottom: 1px solid transparent;
+    /* esta propiedad me ayuda a que el borde del boton sea de un pixel, sea solido y transparente */
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
+    /* esta propiedad me ayuda a que  */
+    position: fixed;
+    /* esta propiedad me ayuda a que sea fija la posicion y no cambie */
+    top: 0%;
+    /* esta propiedad me ayuda a que la distancia hacia arriba sea 0 */
+    z-index: 100;
+    /* esta propiedad me ayuda a que el elemento suba */
+}
+
+.nav {
+    display: flex;
+    /* esta propiedad me ayuda a que las cosas se pongan de lado a lado */
+    height: 80px;
+    width: 100%;
     align-items: center;
 }
-.enlaces-header{
+
+.enlaces-header {
     font-weight: 300;
-    /*estapropiedadmeayudaaquetomemasgrosoreltexto*/margin: auto;
+    /*estapropiedadmeayudaaquetomemasgrosoreltexto*/
+    margin: auto;
     /*estapropiedadmeayudaaquetomesecentre*/
-    transition:all ease-in-out 0.6s ;
-    
+    transition: all ease-in-out 0.6s;
+
 
 }
-.nav .enlaces-header a{
+
+.nav .enlaces-header a {
     color: black;
     text-decoration: none;
     margin-left: 20px;
@@ -53,7 +78,8 @@ nav{
     animation: jello- horizontal .9s both;
     -webkit-animation: jello- horizontal 0.9s both;
 }
-.nav .enlaces-header a:hover{
+
+.nav .enlaces-header a:hover {
     color: #fff;
     background-color: #d03d3d;
     border-color: #d03d3d;
@@ -61,34 +87,43 @@ nav{
     animation: squeeze3124 0.9s both;
     -webkit-animation: squeeze3124 0.9s both;
 }
-.hamburguer{
+
+.hamburguer {
     width: 80px;
     height: 80px;
-    text-align: center; /*porqueesunvector*/
+    text-align: center;
+    /*porqueesunvector*/
     cursor: pointer;
     transition: all 0.5s ease-in;
     z-index: 100;
     display: none;
 }
-.hamburguer > i{
+
+.hamburguer>i {
     font-size: 25px;
-     line-height: 80px; /*es una estrategia para alinear de manera vertical  */
-     
+    line-height: 80px;
+    /*es una estrategia para alinear de manera vertical  */
+
 }
-.titulospro{
-    text-align: left; 
-    margin: 20px 0; /* esta propiedad me ayuda a que tome 20 arriba y 0 abajo */
+
+.titulospro {
+    text-align: left;
+    margin: 20px 0;
+    /* esta propiedad me ayuda a que tome 20 arriba y 0 abajo */
 }
-.contenido-header{
+
+.contenido-header {
     width: 80%;
     height: 600px;
-    display: flex; /* esta propiedad me ayuda a que tome un display flexible */
+    display: flex;
+    /* esta propiedad me ayuda a que tome un display flexible */
     justify-content: space-between;
     align-items: center;
     text-align: center;
     margin: 0 auto;
 }
-.contenido-header > img{
+
+.contenido-header>img {
     width: 350px;
     height: 350px;
     margin-left: 70px;
@@ -96,20 +131,29 @@ nav{
     animation: ease-in animacion 0.5s;
     -webkit-animation: ease-in animacion 0.5s;
 }
-.contenido-header P{
+
+.contenido-header P {
     font-weight: 300;
     margin-top: 14px;
     color: black;
     text-align: justify;
 }
-.textos-header{
+
+.textos-header {
     margin: 0 0 0 30px;
 }
-@keyframes animacion{
-    0% { transform:scale(0) ;  }
-    100% { transform:scale(1) ; }
+
+@keyframes animacion {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
-.contenido-header a{
+
+.contenido-header a {
     margin: 28px 0 0 0;
     width: 150px;
     display: inline-block;
@@ -121,30 +165,35 @@ nav{
     border-radius: 5px;
     font-weight: 400;
     font-size: 16px;
+    font: bold;
     transition: squeeze3124 0.9s both;
-    text-transform: uppercase;/*estapropiedad(uppercase)meayudaaquetomesevuelvamayuscula*/
+    text-transform: uppercase;
+    /*estapropiedad(uppercase)meayudaaquetomesevuelvamayuscula*/
     box-shadow: 0 8px 32px rgba(97, 31, 31, 046);
 }
+
 .content-educacion {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 50px;
     justify-content: space-around;
 }
+
 div {
     display: block;
 }
+
 /* div.content-educacion{
     justify-content: space-evenly;
 } */
 
 /* ##### EDUCATION ##### */
-.section-education{
+.section-education {
     background-color: white;
 
 }
 
-.content-education{
+.content-education {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 30px;
@@ -153,40 +202,48 @@ div {
     background-color: gray;
 
 }
-.section-education .title{
+
+.section-education .title {
     width: 100%;
     text-align: center;
     display: block;
     text-transform: uppercase;
     margin: 15px 0;
-}   
-.title{
+}
+
+.title {
     width: 100%;
     text-align: center;
     display: block;
     text-transform: uppercase;
     margin-bottom: 30px;
 }
-.education{
+
+.education {
     width: 30%;
     background-color: #fff;
     border-radius: 10px;
     padding: 30px;
 }
-.education:hover{
-    box-shadow: 0px 0px 20px gray; /*#####20pixelesdeanchoycolorgris#####*/
+
+.education:hover {
+    box-shadow: 0px 0px 20px gray;
+    /*#####20pixelesdeanchoycolorgris#####*/
     transition: all ease-in-out .5s;
     color: #d03d3d;
 }
-.education a{
+
+.education a {
     text-decoration: none;
     font-size: 12px;
     color: black;
 }
-.education a:hover{
-    color: black ;
+
+.education a:hover {
+    color: black;
 }
-.education i{
+
+.education i {
     color: #d03d3d;
     font-size: 30px;
     border-radius: 50%;
@@ -202,19 +259,21 @@ div {
 }
 
 /* ##### CERTIFICADOS ##### */
-.certificados .title{
+.certificados .title {
     display: block;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
 }
-.content-certificados{
+
+.content-certificados {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 40px;
 }
-.certificado{
+
+.certificado {
     background: #d2d2d2;
     border: 1px solid #d2d2d2;
     border-radius: 5px;
@@ -223,80 +282,97 @@ div {
     margin: 10px 10px;
     text-align: center;
 }
-.certificado img{
+
+.certificado img {
     height: 100px;
     width: auto;
     border-radius: 5px;
 }
-.certificado a{
+
+.certificado a {
     color: gray;
     font-size: 12px;
     text-decoration: none;
 }
-.certificado a:hover{
+
+.certificado a:hover {
     color: #d03d3d;
 }
-.certificado:hover{
+
+.certificado:hover {
     background-color: #d03d3d;
     color: white;
     transition: all ease-in-out .5s;
 
 }
+
 /* ##### FOOTER ##### */
-footer{
+footer {
     background: rgb(70, 70, 70);
-    padding: 50px o 20px 0; 
+    padding: 50px o 20px 0;
     overflow: hidden;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin: auto;
 }
-.partFooter{
+
+.partFooter {
     width: 22%;
-    text-align: center;   
+    text-align: center;
 }
-.partFooter img{
+
+.partFooter img {
     width: 60%;
     margin-bottom: 20%;
-    
+
 }
-.partFooter h4{
+
+.partFooter h4 {
     color: white;
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 15px; /*esta funcion nos sirve para darle distanciamiento entre los elementos */
+    margin-bottom: 15px;
+    /*esta funcion nos sirve para darle distanciamiento entre los elementos */
     background-color: #d03d3d;
     border-radius: 5px;
     border: 1px solid #d03d3d;
     padding: 5px;
 }
-.contact{
-     margin: 10px; /*se distancia 10 pixeles de los puntos cardinales */
+
+.contact {
+    margin: 10px;
+    /*se distancia 10 pixeles de los puntos cardinales */
     display: block;
     text-align: left;
 }
-.contact > i{
-    float: left; /* esta propiedad permite elementos al lado de el, en este caso hablamos de los logos de etiqueta i  */
+
+.contact>i {
+    float: left;
+    /* esta propiedad permite elementos al lado de el, en este caso hablamos de los logos de etiqueta i  */
     margin: 0px 0px 0px 10px;
     color: white;
     border: 1px solid white;
-    border-radius: 50%; /* con esto decimos que los bordes de las esquinas esten al 50% */
+    border-radius: 50%;
+    /* con esto decimos que los bordes de las esquinas esten al 50% */
     height: 30px;
     width: 30px;
     line-height: 28px;
     text-align: center;
     align-items: center;
 }
-.contact > p{
+
+.contact>p {
     margin-left: 50px;
     align-items: center;
     line-height: 28px;
     font-weight: 500;
     color: white;
 }
-.partFooter > a{
-    display: block; /* esto me ayuda a que toda etiqueta a se convierta en un bloque y se acomoda */
+
+.partFooter>a {
+    display: block;
+    /* esto me ayuda a que toda etiqueta a se convierta en un bloque y se acomoda */
     color: white;
     text-decoration: none;
     margin-bottom: 10px;
@@ -304,15 +380,18 @@ footer{
     padding: 5px;
     border-radius: 5px;
 }
-.partFooter > a:hover{
+
+.partFooter>a:hover {
     background-color: #d03d3d;
     transition: all ease-in-out .6s;
     border-radius: 5px;
 }
-.social-media > a > i{
+
+.social-media>a>i {
     font-size: 23px;
     color: white;
-    display: inline-block; /* para que todos se mantengan alineados y esten en un solo bloque */
+    display: inline-block;
+    /* para que todos se mantengan alineados y esten en un solo bloque */
     border: 2px solid white;
     border-radius: 50%;
     width: 38px;
@@ -323,7 +402,8 @@ footer{
     margin-right: 5px;
     transition: all ease-in-out.6s;
 }
-.social-media > a > i:hover{
+
+.social-media>a>i:hover {
     background-color: #d03d3d;
     border-color: #d03d3d;
 }
@@ -332,93 +412,115 @@ footer{
 /* barra de menu hamburguesa */
 
 @media screen and (max-width:900px) {
-    .contenido-header > img{
+    .contenido-header>img {
         width: 150px;
         height: 150px;
-        animation:  ease-in animacion 0.5s;
-}
-h1{
-    font-size: 30px;
-}
-.contenido-header{
-    width: 100%;
-    height: 400px;
+        animation: ease-in animacion 0.5s;
+    }
 
+    h1 {
+        font-size: 30px;
+    }
+
+    .contenido-header {
+        width: 100%;
+        height: 400px;
+
+    }
+
+    .certificado {
+        width: 45%;
+    }
+
+    /* footer */
+    .partFooter {
+        width: 80%;
+    }
+
+    .partFooter img {
+        display: none;
+        /* para ocultar la imagen */
+    }
+
+    footer {
+        padding: 0px;
+    }
 }
-.certificado{
-    width: 45%;
-}
-/* footer */
-.partFooter{
-    width: 80%;
-}
-.partFooter img{
-    display: none; /* para ocultar la imagen */
-}
-footer{
-   padding: 0px;
-}
-}
+
 @media screen and (max-width:700px) {
-.hamburguer{
-    display: block;
-}
-.enlaces-header{
-     position: fixed; /* se pone fijo */
-     background-color: #d03d3d;
-     top: 0;
-     right: 0;
-     width: 100%;
-     height: 100vh;
-     display: flex; 
-     flex-direction: column;
-     text-align: center;
-     align-items: center;
-     clip-path: circle(0.0% at 0 0);
-}
+    .hamburguer {
+        display: block;
+    }
 
-.nav .hamburgueropen{
-    clip-path: circle(150% at 0 0);
-}
- .nav .enlaces-header a{ /*le damos las propiedades a cada etiqueta */
-    color: white;
-    text-transform: uppercase;
-    font-weight: 800;
-    margin-top: 20px;
-    width: 50%;
-    background-color: #cf6c6c;
-}
-.nav .enlaces-header a:hover{
-    color: #d03d3d;
-    background-color: white;
-}
-/* La visual principal*/
-h1{
-    font-size: 35px; /*  tamaño de titulo  */
+    .enlaces-header {
+        position: fixed;
+        /* se pone fijo */
+        background-color: #d03d3d;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        clip-path: circle(0.0% at 0 0);
+    }
 
-}
-.contenido-header{
-    width: 100%;
-    height: 530px;
-    display: block;
-}
-.contenido-header > img{
-    width: 120px;
-    height: 120px;
-    animation:  ease-in animacion 0.5s;
-    margin-top: 20px;
-    -webkit-animation:  ease-in animacion 0.5s;
-}
-.contenido-header > img, .textos-header{
-    margin-left: 0px;
-} 
+    .nav .hamburgueropen {
+        clip-path: circle(150% at 0 0);
+    }
 
-/* Section education */
-.education, .certificado, .partFooter {
-    width: 80%;
-    margin-bottom: 80px;
-}
-.certificado img{
-    height: 130px;
-}
+    .nav .enlaces-header a {
+        /*le damos las propiedades a cada etiqueta */
+        color: white;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-top: 20px;
+        width: 50%;
+        background-color: #cf6c6c;
+    }
+
+    .nav .enlaces-header a:hover {
+        color: #d03d3d;
+        background-color: white;
+    }
+
+    /* La visual principal*/
+    h1 {
+        font-size: 35px;
+        /*  tamaño de titulo  */
+
+    }
+
+    .contenido-header {
+        width: 100%;
+        height: 530px;
+        display: block;
+    }
+
+    .contenido-header>img {
+        width: 120px;
+        height: 120px;
+        animation: ease-in animacion 0.5s;
+        margin-top: 20px;
+        -webkit-animation: ease-in animacion 0.5s;
+    }
+
+    .contenido-header>img,
+    .textos-header {
+        margin-left: 0px;
+    }
+
+    /* Section education */
+    .education,
+    .certificado,
+    .partFooter {
+        width: 80%;
+        margin-bottom: 80px;
+    }
+
+    .certificado img {
+        height: 130px;
+    }
 }

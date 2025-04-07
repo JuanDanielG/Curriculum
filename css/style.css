@@ -1,173 +1,564 @@
-h1 {
-    text-align: center;
-    /* sirve para alinear al centro */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* nombre de la familia de la fuente */
-    color: black;
-    /* color de la fuente */
+/* Variables de colores y fuentes */
+:root {
+    --color-primary: #1a1a2e;
+    --color-secondary: #0f3460;
+    --color-accent: #e94560;
+    --color-light: #f5f5f5;
+    --color-dark: #16213e;
+    --color-gray: #eeeeee;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: antiquewhite;
-    /* color de fondo del body de la pagina */
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
 }
 
-p {
+/* Encabezado y navegación */
+header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.enlaces-header {
+    display: flex;
+    gap: 2rem;
+}
+
+.enlaces-header a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.enlaces-header a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--color-accent);
+    transition: var(--transition);
+}
+
+.enlaces-header a:hover:after {
+    width: 100%;
+}
+
+.hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+/* Sección de presentación */
+.contenido-header {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.textos-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.titulospro {
+    margin-bottom: 1.5rem;
+}
+
+.titulospro h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.titulospro i {
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+}
+
+.textos-header p {
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.textos-header a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+.textos-header a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(233, 69, 96, 0.3);
+}
+
+.contenido-header img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.contenido-header img:hover {
+    transform: scale(1.05);
+}
+
+/* Secciones de contenido */
+section {
+    padding: 5rem 0;
+}
+
+.title {
     text-align: center;
-    /* sirve para alinear al centro */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* nombre de la familia de la fuente */
-    color: black;
-    /* color de la fuente */
+    margin-bottom: 3rem;
 }
 
-/* TABLAS */
-img {
-    display: block;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    width: 200px;
-    /*ancho de la imagen*/
+.title h2 {
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.title h2::after {
+    content: '';
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    width: 50%;
+    height: 3px;
+    background: var(--color-accent);
+}
+
+/* Sección de educación */
+.content-education {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.education {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.education::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--color-accent);
+    transition: var(--transition);
+    z-index: -1;
+}
+
+.education:hover::before {
+    width: 100%;
+}
+
+.education:hover {
+    transform: translateY(-10px);
+    color: white;
+}
+
+.education i {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.education:hover i {
+    color: white;
+}
+
+.education h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.education p {
+    margin-bottom: 0.5rem;
+    transition: var(--transition);
+}
+
+.education a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background-color: var(--color-secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.education:hover a {
+    background-color: var(--color-primary);
+}
+
+/* Sección de certificados */
+.content-certificados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.certificado {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.certificado:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.certificado img {
+    width: 100%;
     height: 200px;
-    /*alto de la imagen*/
-}
-
-img:hover {
-    background-color: cornflowerblue;
-    /* color de fondo al colocar el cursor en la imagen */
-}
-
-tr:hover {
-    background-color: cornflowerblue;
-    /* color de fondo al colocar el cursor en la imagen */
-}
-
-a {
+    object-fit: cover;
+    transition: var(--transition);
     display: block;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto;
-    /* esta propiedad me ayuda a centrar el parrafo */
+}
+
+.certificado:hover img {
+    transform: scale(1.05);
+}
+
+.certificado h3 {
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.certificado h4 {
+    padding: 0 1rem;
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.certificado a {
+    display: block;
+    padding: 0.8rem;
+    background-color: var(--color-secondary);
+    color: white;
+    text-decoration: none;
     text-align: center;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    color: black;
-    /* color de la fuente */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* nombre de la familia de la fuente */
+    margin: 1rem;
+    border-radius: 5px;
+    transition: var(--transition);
 }
 
-/* FORMULARIO DE INPUTS*/
-#contraseña {
-    background-color: coral;
-    /* color de fondo de la caja */
-    color: black;
-    /* color de la letra */
+.certificado a:hover {
+    background-color: var(--color-accent);
 }
 
-input {
-    border-radius: 3px;
-    /* radio estilo de borde */
-    border: 3px solid green;
-    /* tamaño de borde, color y si es solido */
-    background-color: blanchedalmond;
-    /* color de fondo al colocar el cursor en la imagen */
+/* Sección de habilidades (expandida) */
+.skills {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.skill-category h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.skill-category h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-accent);
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-item .skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: var(--color-accent);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-dark);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.partFooter {
+    display: flex;
+    flex-direction: column;
+}
+
+.partFooter img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: 3px solid var(--color-accent);
+}
+
+.partFooter h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.partFooter h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-accent);
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact i {
+    margin-right: 1rem;
+    color: var(--color-accent);
+    font-size: 1.2rem;
+}
+
+.partFooter a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-bottom: 0.8rem;
+    transition: var(--transition);
+}
+
+.partFooter a:hover {
+    color: var(--color-accent);
+    transform: translateX(5px);
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    color: white;
+    transition: var(--transition);
+}
+
+.social-media a:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-5px);
+}
+
+.social-media i {
+    font-size: 1.2rem;
+}
+
+.copyright {
     text-align: center;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    display: block;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto;
-    /* esta propiedad me ayuda a centrar el parrafo */
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
 }
 
-.inputcolor {
-    background-color: antiquewhite;
-    /* color de fondo al colocar el cursor en la imagen */
-}
-/* ETIQUETAS DE MULTIMEDIA*/
-.imagenmultimedia{
-    display: block;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto;
-    /* esta propiedad me ayuda a centrar el parrafo */
-}
-iframe{
-    display: block;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto;
-    /* esta propiedad me ayuda a centrar el parrafo */
-}
-embed{
-    display: block;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto;
-    /* esta propiedad me ayuda a centrar el parrafo */
-}
-object{
-    display: block;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto;
-    /* esta propiedad me ayuda a centrar el parrafo */
-}
-param{
-    display: block;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto;
-    /* esta propiedad me ayuda a centrar el parrafo */
-}
-video{
-    display: block;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto;
-    /* esta propiedad me ayuda a centrar el parrafo */
+/* Efectos de animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* ETIQUETAS DE SEMANTICA*/
-p{
-    display: block;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto;
-    /* esta propiedad me ayuda a centrar el parrafo */ 
-}
-/* Cambios sobre la propia tabla */
-table {
-    border-collapse: collapse;
-    border: 1px solid #ccc;
-    
-  }
-  /* Espacio de relleno en celdas y cabeceras */
-  td,
-  th {
-    padding: 10px;
-  }
-  /* Modificación de estilos en cabeceras */
-  th {
-    background: #000;
-    color: #fff;
-    text-transform: uppercase;
-  }
-  /* Modificación de estilos en celdas */
-  td {
-    text-align: center;
-    border-bottom: 2px solid #111;
-    color: #333;
-    font-size: 18px;
-  }
-
-/* ETIQUETAS DE VALIDACIONES*/
-  form{
-    display: block;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    margin: auto;
-    /* esta propiedad me ayuda a centrar el parrafo */
-    text-align: center;
-  }
-  
-  input:valid,
-textarea:valid {
-    background: green;
+.fadeIn {
+    animation: fadeIn 1s ease forwards;
 }
 
-input:invalid,
-textarea:invalid {
-    background: red;
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .hamburguer {
+        display: block;
+    }
+
+    .enlaces-header {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: var(--color-primary);
+        height: 100vh;
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        z-index: 999;
+    }
+
+    .enlaces-header.show {
+        right: 0;
+    }
+
+    .contenido-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contenido-header img {
+        margin: 0 auto;
+    }
+
+    .education::before {
+        width: 100%;
+        height: 5px;
+    }
+
+    .education:hover::before {
+        height: 100%;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .partFooter img {
+        margin: 0 auto;
+    }
+
+    .partFooter h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contact {
+        justify-content: center;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
 }
